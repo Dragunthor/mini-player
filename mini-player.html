@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mini Player</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: black;
+    }
+
+    #player {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    // extraer ?id=XXXX
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    if (!id) {
+        document.body.innerHTML = "<p style='color:white'>No video ID</p>";
+    } else {
+        const iframe = document.createElement("iframe");
+        iframe.id = "player";
+        iframe.src = "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?autoplay=1&playsinline=1";
+        iframe.allow = "autoplay; encrypted-media; fullscreen";
+        iframe.allowFullscreen = true;
+
+        // Aquí puedes aplicar *cualquier* transformación
+        // (crop, zoom, desplazamiento...)
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        //iframe.style.transform = "translate(0px, -50px) scale(1)";
+        //iframe.style.transformOrigin = "top left";
+
+        document.body.appendChild(iframe);
+    }
+</script>
+
+</body>
+</html>
