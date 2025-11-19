@@ -30,7 +30,7 @@
     } else {
         const iframe = document.createElement("iframe");
         iframe.id = "player";
-        iframe.src = "https://www.youtube.com/embed/eWtfDo9_xSU?autoplay=1&playsinline=1";
+        iframe.src = "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?autoplay=1&playsinline=1";
         iframe.allow = "autoplay; encrypted-media; fullscreen";
         iframe.allowFullscreen = true;
 
