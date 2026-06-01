@@ -95,4 +95,56 @@ Los contenedores se identifican mediante reglas específicas para distintos comp
 
 ---
 
-## 📁 Estructura del repositorio (sugerida)
+## ❓ Preguntas frecuentes
+
+**¿El botón aparece también en la página de reproducción activa (`/watch`)?**  
+No, se omite intencionadamente para no interferir con el reproductor principal de YouTube.
+
+**¿Puedo cambiar el tamaño y la posición del reproductor?**  
+Sí: usa los botones **⤢** (tamaño) y activa el arrastre con **✜** para moverlo.
+
+**¿Por qué a veces la resolución aparece como "?"?**  
+Puede deberse a que el vídeo no tiene formatos de vídeo identificables o la solicitud a la API falló. Reintentará en futuras interacciones.
+
+**¿El script afecta al rendimiento?**  
+No de forma apreciable. Las peticiones a la API de ratings y resolución se cachean por vídeo y se realizan bajo demanda.
+
+**¿Cómo desactivo por completo las valoraciones o las resoluciones?**  
+Haz clic en los botones ⭐ y ? dentro del mini reproductor. La preferencia se guarda.
+
+---
+
+## 🧪 Compatibilidad
+
+- ✅ **Navegadores:** Chrome, Firefox, Edge, Opera (con extensión de usuarioscripts).
+- ✅ **YouTube:** versión web moderna (SPA), incluyendo shorts y playlists.
+- ✅ **Idiomas:** Español (`es`) e Inglés (`en`) – otros caen a inglés por defecto.
+
+---
+
+## 👥 Créditos
+
+- **Adaptación y optimización:** ChatGPT (modelo de OpenAI).
+- **API de valoraciones:** [Return YouTube Dislike](https://returnyoutubedislikeapi.com)
+- **Mini reproductor embebido:** [dragunthor/mini-player](https://github.com/dragunthor/mini-player)
+- Inspirado en usuarioscripts clásicos de mini reproductor para YouTube.
+
+---
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la licencia **MIT**.  
+Eres libre de usarlo, modificarlo y redistribuirlo, siempre que se mantenga el aviso de copyright original.
+
+---
+
+## 🐛 Reportar problemas / Contribuir
+
+Si encuentras algún error o deseas mejorar el script:  
+1. Abre un *issue* en este repositorio.  
+2. Describe los pasos para reproducir el problema y tu entorno (navegador, versión de YouTube, extensiones instaladas).  
+3. Si lo deseas, envía un *pull request* con las correcciones.
+
+---
+
+**¡Disfruta de YouTube sin interrupciones y con toda la información a un clic!** 🚀
